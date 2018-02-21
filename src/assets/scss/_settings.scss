@@ -69,20 +69,20 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
+  primary: #F46326,
+  secondary: #1C2331,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
+$light-gray: #F5F9FC;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-background: $light-gray;
+$body-font-color: #656B76;
+$body-font-family: 'Nunito', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -134,7 +134,7 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: #1C2331;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -147,10 +147,18 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h1': ('font-size': 38),
+    'h2': ('font-size': 34),
+    'h3': ('font-size': 28),
+    'h4': ('font-size': 22),
+    'h5': ('font-size': 18),
+    'h6': ('font-size': 16),
+  ),
+  large: (
+    'h1': ('font-size': 42),
+    'h2': ('font-size': 36),
+    'h3': ('font-size': 30),
+    'h4': ('font-size': 26),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -279,7 +287,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 1.25em 2.2222em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -735,7 +743,7 @@ $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-overlay-background: rgba(28,35,49,0.95);
 
 // 48. Slider
 // ----------
@@ -855,7 +863,7 @@ $topbar-unstack-breakpoint: medium;
 // 56. Xy Grid
 // -----------
 
-$xy-grid: true;
+$xy-grid: false;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
