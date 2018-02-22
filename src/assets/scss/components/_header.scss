@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   height: auto;
+  position: fixed;
+  z-index: 999999;
   padding: 10px 20px;
 
   .logo {
@@ -13,98 +15,99 @@
 }
 
 .reveal-overlay .quote-request {
-  background-color: transparent;
-  border: transparent;
+    background-color: transparent;
+    border: transparent;
 
-  h1, p {
-    text-align: center;
-    color: #fff;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
-  .project-picker {
-    max-width: 654px;
-    width: 100%;
-    list-style: none;
-    margin: 20px auto 0;
-
-    .website,
-    .application,
-    .branding,
-    .other {
-      position: relative;
-      display: inline-block;
-      border: 1px solid #fff;
-      background-color: transparent;
-      padding: 10px;
-      height: 160px;
-      width: 140px;
-      margin: 0 10px;
-      border-radius: 6px;
-      text-align: center;
-      transition: 0.25s ease background-color;
-
-      &:hover {
-        background-color: #fff;
-      }
-
-      &:hover a {
-        color: #1C2331;
-      }
+    h1,
+    p {
+        text-align: center;
+        color: #fff;
     }
 
-    .website a,
-    .application a,
-    .branding a,
-    .other a {
-      color: #fff;
-      position: relative;
-      bottom: 0;
-      transition: 0.25s ease color;
+    p {
+        font-size: 24px;
     }
 
-    li a i {
-      display: block;
-      margin: 0 auto;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 110px;
-      width: 100px;
+    .project-picker {
+        max-width: 654px;
+        width: 100%;
+        list-style: none;
+        margin: 20px auto 0;
+
+        .website,
+        .application,
+        .branding,
+        .other {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #fff;
+            background-color: transparent;
+            padding: 10px;
+            height: 160px;
+            width: 140px;
+            margin: 0 10px;
+            border-radius: 6px;
+            text-align: center;
+            transition: 0.25s ease background-color;
+
+            &:hover {
+                background-color: #fff;
+            }
+
+            &:hover a {
+                color: #1C2331;
+            }
+        }
+
+        .website a,
+        .application a,
+        .branding a,
+        .other a {
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            transition: 0.25s ease color;
+        }
+
+        li a i {
+            display: block;
+            margin: 0 auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 110px;
+            width: 100px;
+        }
+
+        .website a i {
+            background-image: url('../img/website-icon.svg');
+
+            &:hover {
+                background-image: url('../img/website-icon-hov.svg');
+            }
+        }
+
+        .application a i {
+            background-image: url('../img/application-icon.svg');
+
+            &:hover {
+                background-image: url('../img/application-icon-hov.svg');
+            }
+        }
+
+        .branding a i {
+            background-image: url('../img/branding-icon.svg');
+
+            &:hover {
+                background-image: url('../img/branding-icon-hov.svg');
+            }
+        }
+
+        .other a i {
+            background-image: url('../img/other-icon.svg');
+
+            &:hover {
+                background-image: url('../img/other-icon-hov.svg');
+            }
+        }
     }
-
-    .website a i {
-      background-image: url('../img/website-icon.svg');
-
-      &:hover {
-        background-image: url('../img/website-icon-hov.svg');
-      }
-    }
-
-    .application a i {
-      background-image: url('../img/application-icon.svg');
-
-      &:hover {
-        background-image: url('../img/application-icon-hov.svg');
-      }
-    }
-
-    .branding a i {
-      background-image: url('../img/branding-icon.svg');
-
-      &:hover {
-        background-image: url('../img/branding-icon-hov.svg');
-      }
-    }
-
-    .other a i {
-      background-image: url('../img/other-icon.svg');
-
-      &:hover {
-        background-image: url('../img/other-icon-hov.svg');
-      }
-    }
-  }
 }

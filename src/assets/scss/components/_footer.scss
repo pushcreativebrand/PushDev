@@ -1,1 +1,33 @@
-.footer {}
+.footer {
+    background-color: $secondary-color;
+    padding: 30px 20px;
+    
+    .footer-logo {
+        background-image: url('../img/logo-white.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        color: $white;
+        text-align: center;
+    }
+    
+    ul {
+        list-style: none;
+        text-align: center;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                color: $medium-gray;
+                padding: 0 10px;
+            }
+        }
+    }
+    
+}
