@@ -22,37 +22,90 @@ $hero-full-screen-bg-size: cover;
 
 .hero {
   position: relative;
-  height: 550px;
-  padding: 120px 0;
+  height: 600px;
+  padding: 190px 0 0;
   z-index: 0;
-  background-color: $medium-gray;
+  background-color: $light-gray;
+  overflow: hidden;
+  margin: 0;
 
   .hero-bg {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 100vh;
-    top: 0;
-    background-image: $hero-full-screen-bg;
+    height: 150vh;
+    top: -10px;
+    background-image: url(../img/hero-bg.png);
     background-repeat: no-repeat;
-    background-size: 1260px;
-    background-position: right top;
+    background-size: 110%;
+    background-position: center top;
+    transform: rotate(0deg);
+    opacity: 0.2;
+
+    @include breakpoint(medium) {
+      transform: rotate(20deg);
+      top: -50px;
+      right: -500px;
+      background-size: 95%;
+      background-position: right center;
+      opacity: 1;
+    }
+
+    @include breakpoint(large) {
+      transform: rotate(18deg);
+      top: -190px;
+      right: -280px;
+      background-size: 70%;
+      background-position: right center;
+      opacity: 1;
+    }
   }
 
   .content {
     height: auto;
     position: relative;
     z-index: 1;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+      padding-left: 60px;
+    }
 
     h1 {
-      font-size: 54px;
+      font-size: 42px;
       font-weight: bold;
       line-height: 58px;
+      padding-left: 0;
+
+      @include breakpoint(medium) {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 58px;
+        padding-left: 0;
+      }
+
+      @include breakpoint(large) {
+        font-size: 54px;
+        font-weight: bold;
+        line-height: 58px;
+        padding-left: 0;
+      }
     }
 
     h4 {
-      font-size: 42px;
-      margin-bottom: 40px;
+      font-size: 32px;
+      margin-bottom: 30px;
+      padding-left: 0;
+
+      @include breakpoint(medium) {
+        font-size: 38px;
+      }
+
+      @include breakpoint(large) {
+        font-size: 42px;
+        margin-bottom: 40px;
+      }
     }
 
     .button {
@@ -61,5 +114,210 @@ $hero-full-screen-bg-size: cover;
       font-size: 18px;
       height: 65px;
     }
+  }
+}
+
+.text-fader{
+
+  margin:50px 0 0 0;
+  .text-content{
+    font-size:3em;
+    font-weight:bold;
+
+    h1{
+
+      &.line{
+        opacity:0;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-duration: 0.8s;
+        display:none;
+      }
+      &.colour{
+        .letter{
+          color:#fff;
+          transition:all 0.2s ease;
+        }
+
+      }
+    }
+
+    &.in{
+      h1{
+        &.line{
+          animation-name: textFaderIn;
+          display:block;
+        }
+
+        &.colour{
+          &.go{
+            .letter{
+              color:#aed139;
+              @for $i from 1 through 30 {
+                &:nth-child(#{$i}) {
+                  transition-delay: (0.05*$i)+s;
+
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+    &.out{
+      h1{
+        &.line{
+          animation-name: textFaderOut;
+          display:block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes textFaderIn {
+  from{
+    opacity:0;
+    transform:translateY(0);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes textFaderOut {
+  from{
+    opacity:1;
+    transform:translateY(0);
+  }
+  to{
+    opacity:0;
+    transform:translateY(0%);
+  }
+}
+
+.split-block {
+  overflow: hidden;
+  width: auto;
+  position: relative;
+  padding: 120px 0 0;
+
+  h2 {
+    color: #1C2331;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 18px;
+    color: #656B76;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-bottom: 60px;
+    padding-right: 20px;
+  }
+
+  a.button {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: transparent;
+    border: 2px solid #E1E1E1;
+    color: #F16432;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .image {
+    display: block;
+
+    .big {
+      float: right;
+      background-image: url(../img/info-block-1.png);
+      height: 839px;
+      width: 918px;
+      padding-right: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top right;
+    }
+
+    .big-2 {
+      background-image: url(../img/info-block-3.png);
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include breakpoint(medium) {
+        height: 100%;
+        width: 105%;
+      }
+
+      @include breakpoint(large) {
+        height: 100%;
+        width: 150%;
+      }
+    }
+
+    .small {
+      position: relative;
+      background-image: url(../img/info-block-2.png);
+      top: 50%;
+      left: 100%;
+      margin-left: -270px;
+      margin-top: -260px;
+      height: 511px;
+      width: 296px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .copy {
+    float: right;
+    padding-top: 200px;
+    padding-left: 60px;
+    padding-right: 30px;
+  }
+
+  .copy-2 {
+    float: right;
+    padding-left: 60px;
+    padding-right: 60px;
+
+      @include breakpoint(medium) {
+        padding: 80px 10px 80px 40px;
+      }
+  }
+}
+
+.client-grid {
+  margin-top: 120px;
+  background-color: #F5F9FC;
+  text-align: center;
+  padding: 80px 0;
+
+  h2 {}
+
+  p {
+  margin-bottom: 40px;
+  }
+
+  .client-logos {
+    background-image: url(..img/clients@3x.png);
+    background: 800px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  a.button {
+    font-weight: 800;
+    text-transform: uppercase;
   }
 }

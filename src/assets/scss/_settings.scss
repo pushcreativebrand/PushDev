@@ -79,8 +79,8 @@ $light-gray: #F5F9FC;
 $medium-gray: #92969F;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
-$body-background: $light-gray;
+$white: #ffffff;
+$body-background: $white;
 $body-font-color: #656B76;
 $body-font-family: 'Nunito', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
@@ -148,7 +148,7 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 38),
-    'h2': ('font-size': 34),
+    'h2': ('font-size': 32),
     'h3': ('font-size': 28),
     'h4': ('font-size': 22),
     'h5': ('font-size': 18),
