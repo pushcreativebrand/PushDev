@@ -49,27 +49,36 @@
             border-radius: 6px;
             text-align: center;
             transition: 0.25s ease background-color;
+            cursor: pointer;
+
+            input[type="checkbox"] {
+              position: absolute;
+              visibility: hidden;
+              margin: 0;
+              top: 0;
+              left: 0;
+            }
 
             &:hover {
                 background-color: #fff;
             }
 
-            &:hover a {
+            &:hover span {
                 color: #1C2331;
             }
         }
 
-        .website a,
-        .application a,
-        .branding a,
-        .other a {
+        .website span,
+        .application span,
+        .branding span,
+        .other span {
             color: #fff;
             position: relative;
             bottom: 0;
             transition: 0.25s ease color;
         }
 
-        li a i {
+        label span i {
             display: block;
             margin: 0 auto;
             background-position: center;
@@ -78,7 +87,7 @@
             width: 100px;
         }
 
-        .website a i {
+        .website span i {
             background-image: url('../img/website-icon.svg');
 
             &:hover {
@@ -86,7 +95,7 @@
             }
         }
 
-        .application a i {
+        .application span i {
             background-image: url('../img/application-icon.svg');
 
             &:hover {
@@ -94,7 +103,7 @@
             }
         }
 
-        .branding a i {
+        .branding span i {
             background-image: url('../img/branding-icon.svg');
 
             &:hover {
@@ -102,7 +111,7 @@
             }
         }
 
-        .other a i {
+        .other span i {
             background-image: url('../img/other-icon.svg');
 
             &:hover {
