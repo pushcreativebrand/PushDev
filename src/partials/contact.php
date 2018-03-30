@@ -4,6 +4,11 @@
     <p class="column small-12">Choose a project type below</p>
 
     <form action="" method="post">
+      <input placeholder="Your name" type="text" name="input1" value="" tabindex="1" autofocus>
+      <input type="submit" value="Send" name="input2" id="contact-submit" data-submit="...Sending">
+    </form>
+
+    <!-- <form action="" method="post">
       <div class="grid-container">
         <div class="grid-x grid-padding-x">
 
@@ -59,6 +64,6 @@
 
         </div>
       </div>
-    </form>
+    </form> -->
   </div>
 </div>
