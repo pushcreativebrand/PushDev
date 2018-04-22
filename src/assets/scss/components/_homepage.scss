@@ -293,15 +293,23 @@ $hero-full-screen-bg-size: cover;
 }
 
 .client-grid {
-  margin-top: 120px;
-  background-color: #F5F9FC;
-  text-align: center;
-  padding: 80px 0;
+    margin-top: 120px;
+    background-color: #F5F9FC;
+    text-align: center;
+    padding: 120px 5% 110px;
 
   h1 {}
 
   p {
     margin-bottom: 40px;
+  }
+
+  .client-row-1 {
+    margin-top: 40px;
+  }
+
+  .client-row-2 {
+
   }
 
   .client {

@@ -11,9 +11,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$message = $_POST['message'];
+$first = $_POST['first'];
+$last = $_POST['last'];
+$email = $_POST['email'];
+$message = $_POST['message'];xw
 
-$sql = "INSERT INTO messages (name)VALUES ('$message')";
+$sql = "INSERT INTO messages (name)VALUES ('$first','$last','$email','$message')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";

@@ -23,6 +23,7 @@
     <a data-open="projectPicker" class="button large small-12 medium-10 large-10" href="#">Start your journey</a>
   </div>
 </div>
+
 <!-- Image Left Block -->
 <div class="split-block flex-container">
   <div class="row">
@@ -40,6 +41,7 @@
     </div>
   </div>
 </div>
+
 <!-- Image Right Block -->
 <div class="split-block flex-container">
   <div class="row">
@@ -57,29 +59,81 @@
 
   </div>
 </div>
+
 <!-- Client Logos -->
 <div class="client-grid">
   <div class="row small-12">
       <h1 class="columns small-12 medium-10 large-10 medium-offset-1 large-offset-1">We Champion Brands and Everyday Businesses</h1>
+
       <p class="columns small-12 medium-10 large-8 medium-offset-1 large-offset-2">Being a business owner is demanding on both your time and resources. We know just how valuable every second can be, and were here to make your experience though the journey as smooth as possible.</p>
+
       <div class="columns small-12">
         <a data-open="projectPicker" class="button large" href="#">Let's Chat</a>
       </div>
   </div>
-      <!-- <p class="columns small-12 medium-10 large-8 medium-offset-1 large-offset-2">We’ve lived the grind, the long hours into the night, the endless cups of coffee while jungling customer calls and Pediatric appointments. We know whats its like.  Let us Push you while your on the journey becuase lets be honest, the journey is where all the fun is. ;)</p> -->
 
-  <div class="row small-12">
-    <div class="client column small-3"><img src="/assets/img/logo-1.png" alt=""></div>
-    <div class="client column small-3"><img src="/assets/img/logo-2.png" alt=""></div>
-    <div class="client column small-3"><img src="/assets/img/logo-3.png" alt=""></div>
-    <div class="client column small-3"><img src="/assets/img/logo-4.png" alt=""></div>
+  <!-- <p class="columns small-12 medium-10 large-8 medium-offset-1 large-offset-2">We’ve lived the grind, the long hours into the night, the endless cups of coffee while jungling customer calls and Pediatric appointments. We know whats its like.  Let us Push you while your on the journey becuase lets be honest, the journey is where all the fun is. ;)</p> -->
+
+  <div class="large reveal quote-request" id="projectPicker" data-reveal>
+    <div class="row">
+      <h1 class="column small-12">Need a quote for a project?</h1>
+      <p class="column small-12">Choose a project type below</p>
+
+      <form action="/connect.php" method="post">
+        <input placeholder="Your name" type="text" name="input1" value="" tabindex="1" autofocus>
+        <input type="submit" value="Send" name="input2" id="contact-submit" data-submit="...Sending">
+      </form>
+
+      <form action="" method="post">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+
+            <fieldset class="large-6 cell project-picker">
+              <label for="website" class="website">
+                <input id="website" type="checkbox" tabindex="1" name="website">
+                <span>
+                  <i></i>Website
+                </span>
+              </label>
+
+              <label for="application" class="application">
+                <input id="application" type="checkbox" tabindex="2" name="application">
+                <span>
+                  <i></i>Application
+                </span>
+              </label>
+
+              <label for="branding" class="branding">
+                <input id="branding" type="checkbox" tabindex="3" name="branding">
+                <span>
+                  <i></i>Branding
+                </span>
+              </label>
+
+              <label for="other" class="other">
+                <input id="other" type="checkbox" tabindex="4" name="other">
+                <span>
+                  <i></i>Other
+                </span>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <div class="row small-12">
-    <div class="client column small-3 small-offset-1 medium-offset-1"><img src="/assets/img/logo-5.png" alt=""></div>
-    <div class="client column small-3"><img src="/assets/img/logo-6.png" alt=""></div>
-    <div class="client column small-3"><img src="/assets/img/logo-7.png" alt=""></div>
+  <div class="client-row-1 row small-12">
+    <div class="client column small-3"><img src="/assets/img/divfund.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/rettius.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/didddly.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/gloriblends.png" alt=""></div>
   </div>
 
-
+  <div class="client-row-2 row small-12">
+    <div class="client column small-3"><img src="/assets/img/offkey.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/sava.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/financial.png" alt=""></div>
+    <div class="client column small-3"><img src="/assets/img/subtrakt.png" alt=""></div>
+  </div>
 </div>
